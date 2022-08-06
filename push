@@ -6,7 +6,7 @@ then
 	echo "commit message: ${first_message}"
 	git add .
 	git commit -m "${first_message}"
-	git push https://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@github.com/ivannemirovskiy/learn-c.git
+	git push https://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@github.com/IvanNemirovskiy/learn-c.git
 	export MESSAGE=${first_message}
 elif [ -n $MESSAGE ] && [[ "$first_message" == "
 	" ]]
@@ -14,7 +14,7 @@ then
 	echo "pushing with predefined message: ${MESSAGE}"
 	git add .
 	git commit -m "${MESSAGE}"
-	git push https://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@github.com/ivannemirovskiy/learn-c.git
+	git push https://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@github.com/IvanNemirovskiy/learn-c.git
 else
 	echo "enter a commit message"
 fi
