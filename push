@@ -1,19 +1,20 @@
 #!/bin/bash
-echo "enter a commit message:"
-read first_message
-if [[ -n $first_message ]]
+read -p "using predefined message?" yn
+if [[ "$yn" == "n" || "$yn" == "N" || "$yn" == "No" || "$yn" == "no" ]]
 then
+	echo "enter a commit message:"
+	read first_message
 	echo "commit message: ${first_message}"
 	git add .
 	git commit -m "${first_message}"
-	git push https://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@github.com/IvanNemirovskiy/learn-c.git
+	git push https://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@github.com/IvanNemirovskiy/learn-c.git
 	export MESSAGE=${first_message}
-elif [ -n $MESSAGE ]
+elif [[ "$yn" == "y" || "$yn" == "Y" || "$yn" == "Yes" || "$yn" == "yes" ]]
 then
 	echo "pushing with predefined message: ${MESSAGE}"
 	git add .
 	git commit -m "${MESSAGE}"
-	git push https://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@github.com/IvanNemirovskiy/learn-c.git
+	git push https://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@github.com/IvanNemirovskiy/learn-c.git
 else
 	echo "enter a commit message"
 fi
