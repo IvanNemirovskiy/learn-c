@@ -8,8 +8,7 @@ then
 	git commit -m "${first_message}"
 	git push https://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@github.com/IvanNemirovskiy/learn-c.git
 	export MESSAGE=${first_message}
-elif [[ "$first_message" == "
-	" ]]
+elif [ -n $MESSAGE ]
 then
 	echo "pushing with predefined message: ${MESSAGE}"
 	git add .
