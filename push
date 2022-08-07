@@ -7,14 +7,14 @@ then
 	echo "commit message: ${first_message}"
 	git add .
 	git commit -m "${first_message}"
-	git push https://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z@github.com/IvanNemirovskiy/learn-c.git
+	git push
 elif [[ "$yn" == "y" || "$yn" == "Y" || "$yn" == "Yes" || "$yn" == "yes" ]]
 then
 	export MESSAGE=$first_message
 	echo "pushing with predefined message: $MESSAGE"
 	git add .
 	git commit -m "$MESSAGE"
-	git push https://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@github.com/IvanNemirovskiy/learn-c.git
+	git push
 else
 	echo "enter a commit message"
 fi
